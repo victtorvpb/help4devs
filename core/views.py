@@ -11,7 +11,7 @@ def index(request):
     }
     return render(request, 'index.html', context=context)
 
-def signup(request):
+def register(request):
     context = {
         "form": DevForm(request.POST or None)
     }

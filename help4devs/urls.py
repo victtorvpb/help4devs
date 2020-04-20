@@ -20,5 +20,5 @@ from core import views as core_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', core_views.index),
-    url(r'^cadastro/', core_views.signup),
+    url(r'^cadastro/', core_views.register),
 ]
