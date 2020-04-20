@@ -8,6 +8,9 @@ from django.db import models
 
 class JobName(TimeStampedModel):
     job_name = models.CharField(max_length=250, blank=False, null=False,  verbose_name="Seu cargo anterior")
+
+    def __str__(self):
+        return self.job_name
   
 
 class Dev(TimeStampedModel):
@@ -17,7 +20,7 @@ class Dev(TimeStampedModel):
     email = models.EmailField(blank=False, null=False, verbose_name="Seu e-mail")
     github = models.URLField(blank=True, null=True, verbose_name="Seu Github, se tiver")
     linkedin = models.URLField(blank=True, null=True, verbose_name="Seu Linkedin, se tiver")
-    job_name = models.ForeignKey(JobName, on_delete=models.PROTECT, related_name='person_jobs')
+    job_name = models.ForeignKey(JobName, on_delete=models.PROTECT, related_name='person_jobs', verbose_name="Seu cargo anterior")
 
     @property
     def short_linkedin_url(self):
