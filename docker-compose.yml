@@ -6,7 +6,7 @@ services:
     image: help4dev
     build:
       context: .
-    command: pipenv run python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
@@ -21,7 +21,7 @@ services:
     image: help4dev
     build:
       context: .
-    command: pipenv run python manage.py migrate
+    command: python manage.py migrate
     volumes:
       - .:/code
     networks:

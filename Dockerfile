@@ -18,4 +18,7 @@ RUN find /code -name '*__pycache__' -delete
 RUN pip install -U pip
 
 RUN pip install pipenv
-RUN pipenv sync
+RUN pipenv lock --requirements > requirements.txt
+RUN pipenv --rm
+RUN pip uninstall pipenv -y
+RUN pip install -r requirements.txt
