@@ -1,7 +1,11 @@
 version: '3.7'
 
 services:
+<<<<<<< HEAD
   employee:
+=======
+  help4dev:
+>>>>>>> add_docker
     container_name: help4dev
     image: help4dev
     build:
