@@ -13,4 +13,5 @@ class DevForm(ModelForm):
             "email",
             "github",
             "linkedin",
+            "job_name"
         ]
