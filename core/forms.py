@@ -8,10 +8,9 @@ class DevForm(ModelForm):
         model = Dev
         fields = [
             "name",
-            "job",
             "place",
+            "job_name",
             "email",
             "github",
             "linkedin",
-            "job_name"
         ]
